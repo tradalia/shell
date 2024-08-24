@@ -25,37 +25,21 @@ THE SOFTWARE.
 package datastore
 
 import (
-	"fmt"
-	"github.com/bit-fever/shell/pkg/command"
-
 	"github.com/spf13/cobra"
 )
 
 //=============================================================================
 
-var datastoreCmd = &cobra.Command{
+var Command = &cobra.Command{
 	Use:   "datastore",
 	Short: "Run datastore related commands",
-	Long:  `Run commands related to the datastore server....`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("datastore called")
-	},
+	Long:  `Run commands related to the datastore server to import/export data`,
 }
 
 //=============================================================================
 
 func init() {
-	command.RootCmd.AddCommand(datastoreCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// storeCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// storeCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	Command.AddCommand(importCmd)
 }
 
 //=============================================================================

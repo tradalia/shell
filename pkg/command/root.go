@@ -26,6 +26,8 @@ package command
 
 import (
 	"fmt"
+	"github.com/bit-fever/shell/pkg/command/datastore"
+
 	"os"
 
 	"github.com/bit-fever/shell/pkg/command/inventory"
@@ -44,9 +46,6 @@ var RootCmd = &cobra.Command{
 	Use:   "shell",
 	Short: "Bit Fever Shell",
 	Long:  `A command line interface that allows to interact with a BitFever platform`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("Shell was called: %v with %v", cmd, args)
-	},
 }
 
 //=============================================================================
@@ -65,15 +64,10 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here, will be global for your application.
-
-	RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.bfs.yaml)")
-
-	// Cobra also supports local flags, which will only run when this action is called directly.
-	RootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "Config file (default is $HOME/.bfs.yaml)")
 
 	RootCmd.AddCommand(inventory.Command)
+	RootCmd.AddCommand(datastore.Command)
 }
 
 //=============================================================================
