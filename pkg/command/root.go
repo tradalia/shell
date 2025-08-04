@@ -27,6 +27,7 @@ package command
 import (
 	"fmt"
 	"github.com/bit-fever/shell/pkg/command/datastore"
+	"github.com/bit-fever/shell/pkg/command/system"
 
 	"os"
 
@@ -68,6 +69,7 @@ func init() {
 
 	RootCmd.AddCommand(inventory.Command)
 	RootCmd.AddCommand(datastore.Command)
+	RootCmd.AddCommand(system   .Command)
 }
 
 //=============================================================================
