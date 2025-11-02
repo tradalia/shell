@@ -25,8 +25,8 @@ THE SOFTWARE.
 package inventory
 
 import (
-	"github.com/bit-fever/shell/pkg/command/inventory/exchange"
-	"github.com/bit-fever/shell/pkg/command/inventory/instrument"
+	"github.com/tradalia/shell/pkg/command/inventory/exchange"
+	"github.com/tradalia/shell/pkg/command/inventory/instrument"
 	"github.com/spf13/cobra"
 )
 

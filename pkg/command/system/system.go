@@ -25,7 +25,7 @@ THE SOFTWARE.
 package system
 
 import (
-	"github.com/bit-fever/shell/pkg/command/system/adapter"
+	"github.com/tradalia/shell/pkg/command/system/adapter"
 	"github.com/spf13/cobra"
 )
 

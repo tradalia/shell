@@ -26,12 +26,12 @@ package command
 
 import (
 	"fmt"
-	"github.com/bit-fever/shell/pkg/command/datastore"
-	"github.com/bit-fever/shell/pkg/command/system"
+	"github.com/tradalia/shell/pkg/command/datastore"
+	"github.com/tradalia/shell/pkg/command/system"
 
 	"os"
 
-	"github.com/bit-fever/shell/pkg/command/inventory"
+	"github.com/tradalia/shell/pkg/command/inventory"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

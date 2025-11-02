@@ -1,4 +1,4 @@
-module github.com/bit-fever/shell
+module github.com/tradalia/shell
 
 go 1.24
 

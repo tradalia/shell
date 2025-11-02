@@ -26,8 +26,8 @@ package instrument
 
 import (
 	"fmt"
-	"github.com/bit-fever/shell/pkg/model"
-	"github.com/bit-fever/shell/pkg/tool"
+	"github.com/tradalia/shell/pkg/model"
+	"github.com/tradalia/shell/pkg/tool"
 	"github.com/spf13/cobra"
 )
 

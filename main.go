@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 package main
 
-import "github.com/bit-fever/shell/pkg/command"
+import "github.com/tradalia/shell/pkg/command"
 
 //=============================================================================
 
